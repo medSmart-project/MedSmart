@@ -1,0 +1,12 @@
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Core\bin\Debug\net8.0\MedSmart.Core.deps.json
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Core\bin\Debug\net8.0\MedSmart.Core.dll
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Core\bin\Debug\net8.0\MedSmart.Core.pdb
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Core\obj\Debug\net8.0\MedSmart.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Core\obj\Debug\net8.0\MedSmart.Core.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Core\obj\Debug\net8.0\MedSmart.Core.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Core\obj\Debug\net8.0\MedSmart.Core.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Core\obj\Debug\net8.0\MedSmart.Core.sourcelink.json
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Core\obj\Debug\net8.0\MedSmart.Core.dll
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Core\obj\Debug\net8.0\refint\MedSmart.Core.dll
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Core\obj\Debug\net8.0\MedSmart.Core.pdb
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Core\obj\Debug\net8.0\ref\MedSmart.Core.dll

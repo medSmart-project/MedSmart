@@ -1,0 +1,6 @@
+@MedSmart.Presentation_HostAddress = http://localhost:5163
+
+GET {{MedSmart.Presentation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
