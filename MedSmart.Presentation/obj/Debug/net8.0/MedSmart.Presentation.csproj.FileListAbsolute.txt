@@ -1,5 +1,3 @@
-C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\appsettings.json
 C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\MedSmart.Presentation.exe
 C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\MedSmart.Presentation.deps.json
 C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\MedSmart.Presentation.runtimeconfig.json
@@ -145,3 +143,4 @@ C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\Micro
 C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\Microsoft.Rest.ClientRuntime.Azure.dll
 C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\Documentation.xml
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\appsettings.json

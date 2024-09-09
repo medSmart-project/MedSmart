@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MedSmart.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49c2a714a638a186f27b3033776132fe2899c8fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+139cf99513c071646bc569e97c0b5438da2b03fe")]
 [assembly: System.Reflection.AssemblyProductAttribute("MedSmart.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MedSmart.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
