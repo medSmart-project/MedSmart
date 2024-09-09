@@ -42,7 +42,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brands");
+                    b.ToTable("Brands", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.Comment", b =>
@@ -73,7 +73,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comments", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.Doctor", b =>
@@ -96,7 +96,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Doctors");
+                    b.ToTable("Doctors", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.FirebaseToken", b =>
@@ -119,7 +119,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("FirebaseTokens");
+                    b.ToTable("FirebaseTokens", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.HangfireJob", b =>
@@ -161,7 +161,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("HangfireJobs");
+                    b.ToTable("HangfireJobs", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.Medication", b =>
@@ -248,7 +248,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasIndex("SupplierId");
 
-                    b.ToTable("Medications");
+                    b.ToTable("Medications", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.MedicationCategory", b =>
@@ -271,7 +271,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MedicationCategories");
+                    b.ToTable("MedicationCategories", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.MedicationImage", b =>
@@ -293,7 +293,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasIndex("MedicationId");
 
-                    b.ToTable("MedicationImages");
+                    b.ToTable("MedicationImages", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.MedicationLog", b =>
@@ -322,7 +322,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("MedicationLogs");
+                    b.ToTable("MedicationLogs", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.MedicationSchedule", b =>
@@ -359,7 +359,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasIndex("PrescriptionId");
 
-                    b.ToTable("MedicationSchedules");
+                    b.ToTable("MedicationSchedules", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.MedicationSubCategory", b =>
@@ -387,7 +387,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("MedicationSubCategories");
+                    b.ToTable("MedicationSubCategories", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.MedicationTag", b =>
@@ -403,7 +403,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasIndex("TagId");
 
-                    b.ToTable("MedicationTags");
+                    b.ToTable("MedicationTags", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.MedicationsDiscount", b =>
@@ -431,7 +431,7 @@ namespace MedSmart.Infrastructure.Migrations
                     b.HasIndex("MedicationId")
                         .IsUnique();
 
-                    b.ToTable("MedicationsDiscounts");
+                    b.ToTable("MedicationsDiscounts", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.NotificationLog", b =>
@@ -460,7 +460,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("NotificationLogs");
+                    b.ToTable("NotificationLogs", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.Order", b =>
@@ -499,7 +499,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasIndex("ShippingId");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.OrderDetail", b =>
@@ -528,7 +528,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("OrderDetails");
+                    b.ToTable("OrderDetails", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.OrderStatus", b =>
@@ -546,7 +546,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("OrderStatuses");
+                    b.ToTable("OrderStatuses", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.Prescription", b =>
@@ -580,7 +580,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Prescriptions");
+                    b.ToTable("Prescriptions", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.Rating", b =>
@@ -611,7 +611,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Ratings");
+                    b.ToTable("Ratings", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.Reminder", b =>
@@ -659,7 +659,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Reminders");
+                    b.ToTable("Reminders", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.ReminderHistory", b =>
@@ -688,7 +688,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasIndex("ReminderId");
 
-                    b.ToTable("ReminderHistories");
+                    b.ToTable("ReminderHistories", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.ReminderSettings", b =>
@@ -719,7 +719,7 @@ namespace MedSmart.Infrastructure.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("ReminderSettings");
+                    b.ToTable("ReminderSettings", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.Shipping", b =>
@@ -743,7 +743,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Shippings");
+                    b.ToTable("Shippings", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.StockAlert", b =>
@@ -772,7 +772,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("StockAlerts");
+                    b.ToTable("StockAlerts", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.Supplier", b =>
@@ -800,7 +800,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Suppliers");
+                    b.ToTable("Suppliers", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.Tag", b =>
@@ -817,7 +817,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tags");
+                    b.ToTable("Tags", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.User", b =>
@@ -839,7 +839,7 @@ namespace MedSmart.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.UserProfile", b =>
@@ -875,7 +875,7 @@ namespace MedSmart.Infrastructure.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("UserProfiles");
+                    b.ToTable("UserProfiles", (string)null);
                 });
 
             modelBuilder.Entity("MedSmart.Core.Domain.Entities.Comment", b =>

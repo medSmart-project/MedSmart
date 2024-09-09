@@ -7,8 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Domain\Application\DTOs\" />
-    <Folder Include="Domain\Application\IService\" />
     <Folder Include="Domain\Application\Services\" />
     <Folder Include="Domain\IRepositoryContracts\" />
   </ItemGroup>

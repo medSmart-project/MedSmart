@@ -140,3 +140,8 @@ C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\obj\Debug\net8.0\refin
 C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\obj\Debug\net8.0\MedSmart.Presentation.pdb
 C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\obj\Debug\net8.0\MedSmart.Presentation.genruntimeconfig.cache
 C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\obj\Debug\net8.0\ref\MedSmart.Presentation.dll
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\Microsoft.Azure.CognitiveServices.Vision.ComputerVision.dll
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\Microsoft.Rest.ClientRuntime.dll
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\Microsoft.Rest.ClientRuntime.Azure.dll
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\Documentation.xml

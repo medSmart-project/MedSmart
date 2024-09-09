@@ -9,7 +9,7 @@ public class MedicationImage
 
     [Required(ErrorMessage = "Image URL is required.")]
     [Url(ErrorMessage = "Invalid URL format.")]
-    public string ImageUrl { get; set; }
+    public string? ImageUrl { get; set; }
 
     public Medication Medication { get; set; }
 }

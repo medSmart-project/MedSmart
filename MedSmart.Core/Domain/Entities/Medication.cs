@@ -18,8 +18,8 @@ namespace MedSmart.Core.Domain.Entities
         [Range(0.01, 10000, ErrorMessage = "Price must be between 0.01 and 10000.")]
         public decimal Price { get; set; }
 
-        public Guid BrandId { get; set; }
-        public Guid CategoryId { get; set; }
+        public int BrandId { get; set; }
+        public int CategoryId { get; set; }
 
         [Required(ErrorMessage = "Dosage is required.")]
         [StringLength(50, ErrorMessage = "Dosage cannot exceed 50 characters.")]

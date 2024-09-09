@@ -1,0 +1,271 @@
+﻿<?xml version="1.0"?>
+<doc>
+	<assembly>
+		<name>YourAssemblyName</name>
+	</assembly>
+	<members>
+		<!-- GenericRepository.cs -->
+		<member name="T:MedSmart.Infrastructure.Persistence.RepositoryContracts.GenericRepository`1">
+			<summary>
+				A generic repository for performing CRUD operations on entities.
+			</summary>
+			<typeparam name="T">The type of the entity.</typeparam>
+			<remarks>
+				This repository provides basic CRUD operations and can be extended for more complex queries.
+			</remarks>
+		</member>
+		<member name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.GenericRepository`1.#ctor(MedSmart.Infrastructure.Persistence.Data.ApplicationDbContext)">
+			<summary>
+				Initializes a new instance of the <see cref="GenericRepository{T}"/> class.
+			</summary>
+			<param name="context">The database context.</param>
+			<remarks>
+				The context is used to interact with the database.
+			</remarks>
+		</member>
+		<member name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.GenericRepository`1.AddAsync(`0)">
+			<summary>
+				Adds a new entity to the database.
+			</summary>
+			<param name="entity">The entity to add.</param>
+			<returns>A task that represents the asynchronous operation.</returns>
+			<remarks>
+				This method is asynchronous and should be awaited.
+			</remarks>
+			<example>
+				<code lang="csharp">
+					await repository.AddAsync(newEntity);
+				</code>
+			</example>
+		</member>
+		<member name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.GenericRepository`1.AddRangeAsync(System.Collections.Generic.IEnumerable{`0})">
+			<summary>
+				Adds a range of new entities to the database.
+			</summary>
+			<param name="entities">The entities to add.</param>
+			<returns>A task that represents the asynchronous operation.</returns>
+			<remarks>
+				This method is useful for bulk inserts.
+			</remarks>
+			<example>
+				<code lang="csharp">
+					await repository.AddRangeAsync(newEntities);
+				</code>
+			</example>
+		</member>
+		<member name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.GenericRepository`1.DeleteAsync(`0)">
+			<summary>
+				Deletes an entity from the database.
+			</summary>
+			<param name="entity">The entity to delete.</param>
+			<returns>A task that represents the asynchronous operation.</returns>
+			<remarks>
+				Ensure the entity exists before attempting to delete it.
+			</remarks>
+			<example>
+				<code lang="csharp">
+					await repository.DeleteAsync(entityToDelete);
+				</code>
+			</example>
+		</member>
+		<member name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.GenericRepository`1.DeleteRangeAsync(System.Collections.Generic.IEnumerable{`0})">
+			<summary>
+				Deletes a range of entities from the database.
+			</summary>
+			<param name="entities">The entities to delete.</param>
+			<returns>A task that represents the asynchronous operation.</returns>
+			<remarks>
+				This method is useful for bulk deletions.
+			</remarks>
+			<example>
+				<code lang="csharp">
+					await repository.DeleteRangeAsync(entitiesToDelete);
+				</code>
+			</example>
+		</member>
+		<member name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.GenericRepository`1.FindAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+			<summary>
+				Finds entities based on a predicate.
+			</summary>
+			<param name="predicate">The predicate to filter entities.</param>
+			<returns>A task that represents the asynchronous operation. The task result contains a collection of entities that match the predicate.</returns>
+			<remarks>
+				Use this method to perform complex queries.
+			</remarks>
+			<example>
+				<code lang="csharp">
+					var results = await repository.FindAsync(e => e.Property == value);
+				</code>
+			</example>
+		</member>
+		<member name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.GenericRepository`1.GetAllAsync">
+			<summary>
+				Gets all entities from the database.
+			</summary>
+			<returns>A task that represents the asynchronous operation. The task result contains a collection of all entities.</returns>
+			<remarks>
+				This method retrieves all records and can be resource-intensive.
+			</remarks>
+			<example>
+				<code lang="csharp">
+					var allEntities = await repository.GetAllAsync();
+				</code>
+			</example>
+		</member>
+		<member name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.GenericRepository`1.GetByIdAsync(System.Int32)">
+			<summary>
+				Gets an entity by its identifier.
+			</summary>
+			<param name="id">The identifier of the entity.</param>
+			<returns>A task that represents the asynchronous operation. The task result contains the entity with the specified identifier.</returns>
+			<remarks>
+				Ensure the ID is valid and exists in the database.
+			</remarks>
+			<example>
+				<code lang="csharp">
+					var entity = await repository.GetByIdAsync(id);
+				</code>
+			</example>
+		</member>
+		<member name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.GenericRepository`1.SaveChangesAsync">
+			<summary>
+				Saves changes to the database.
+			</summary>
+			<returns>A task that represents the asynchronous operation. The task result contains the number of state entries written to the database.</returns>
+			<remarks>
+				Call this method after making changes to entities to persist them.
+			</remarks>
+			<example>
+				<code lang="csharp">
+					var changes = await repository.SaveChangesAsync();
+				</code>
+			</example>
+		</member>
+		<member name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.GenericRepository`1.UpdateAsync(`0)">
+			<summary>
+				Updates an entity in the database.
+			</summary>
+			<param name="entity">The entity to update.</param>
+			<returns>A task that represents the asynchronous operation.</returns>
+			<remarks>
+				Ensure the entity exists before attempting to update it.
+			</remarks>
+			<example>
+				<code lang="csharp">
+					await repository.UpdateAsync(entityToUpdate);
+				</code>
+			</example>
+		</member>
+		<member name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.GenericRepository`1.GetPagedAsync(System.Int32,System.Int32)">
+			<summary>
+				Gets a paged list of entities from the database.
+			</summary>
+			<param name="pageIndex">The index of the page.</param>
+			<param name="pageSize">The size of the page.</param>
+			<returns>A task that represents the asynchronous operation. The task result contains a tuple with the paged list of entities and the total count of entities.</returns>
+			<remarks>
+				Use this method for pagination to improve performance on large datasets.
+			</remarks>
+			<example>
+				<code lang="csharp">
+					var (pagedEntities, totalCount) = await repository.GetPagedAsync(pageIndex, pageSize);
+				</code>
+			</example>
+		</member>
+
+		<!-- UnitOfWork.cs -->
+		<member name="T:MedSmart.Infrastructure.Persistence.RepositoryContracts.UnitOfWork">
+			<summary>
+				A unit of work that manages multiple repository operations within a single transaction.
+			</summary>
+			<remarks>
+				Use the UnitOfWork to ensure atomicity of multiple operations.
+			</remarks>
+		</member>
+		<member name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.UnitOfWork.#ctor(MedSmart.Infrastructure.Persistence.Data.ApplicationDbContext)">
+			<summary>
+				Initializes a new instance of the <see cref="UnitOfWork"/> class.
+			</summary>
+			<param name="context">The database context.</param>
+			<remarks>
+				The context is used to manage transactions.
+			</remarks>
+		</member>
+		<member name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.UnitOfWork.Repository``1">
+			<summary>
+				Gets a repository for the specified entity type.
+			</summary>
+			<typeparam name="T">The type of the entity.</typeparam>
+			<returns>A repository for the specified entity type.</returns>
+			<remarks>
+				Use this method to access repositories for different entities.
+			</remarks>
+			<example>
+				<code lang="csharp">
+					var userRepository = unitOfWork.Repository<User>();</User>
+            </code>
+			</example>
+		</member>
+		<member name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.UnitOfWork.SaveChangesAsync">
+			<summary>
+				Saves changes to the database.
+			</summary>
+			<returns>A task that represents the asynchronous operation. The task result contains the number of state entries written to the database.</returns>
+			<remarks>
+				Call this method to commit all changes made within the unit of work.
+			</remarks>
+			<example>
+				<code lang="csharp">
+					var changes = await unitOfWork.SaveChangesAsync();
+				</code>
+			</example>
+		</member>
+		<member name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.UnitOfWork.Dispose">
+			<summary>
+				Disposes the unit of work and its resources.
+			</summary>
+			<remarks>
+				Ensure to dispose the unit of work to free up resources.
+			</remarks>
+			<example>
+				<code lang="csharp">
+					unitOfWork.Dispose();
+				</code>
+			</example>
+		</member>
+
+		<!-- RepositoryFactory.cs -->
+		<member name="T:MedSmart.Infrastructure.Persistence.RepositoryContracts.RepositoryFactory">
+			<summary>
+				A factory for creating instances of repositories.
+			</summary>
+			<remarks>
+				Use this factory to create repository instances without directly instantiating them.
+			</remarks>
+		</member>
+		<member name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.RepositoryFactory.#ctor(MedSmart.Infrastructure.Persistence.Data.ApplicationDbContext)">
+			<summary>
+				Initializes a new instance of the <see cref="RepositoryFactory"/> class.
+			</summary>
+			<param name="context">The database context.</param>
+			<remarks>
+				The context is used to create repository instances.
+			</remarks>
+		</member>
+		<member name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.RepositoryFactory.CreateRepository``1">
+			<summary>
+				Creates a repository for the specified entity type.
+			</summary>
+			<typeparam name="T">The type of the entity.</typeparam>
+			<returns>A repository for the specified entity type.</returns>
+			<remarks>
+				Use this method to obtain a repository instance for a specific entity type.
+			</remarks>
+			<example>
+				<code lang="csharp">
+					var userRepository = repositoryFactory.CreateRepository<User>();</User>
+        </code>
+			</example>
+		</member>
+	</members>
+</doc>
