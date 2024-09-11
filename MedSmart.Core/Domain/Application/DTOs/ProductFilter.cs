@@ -1,6 +1,6 @@
 ﻿namespace MedSmart.Core.Domain.Application.DTOs;
 
-public class ProductFilter
+public class MedicationFilter
 {
     public string? Name { get; set; }
     public string? Category { get; set; }

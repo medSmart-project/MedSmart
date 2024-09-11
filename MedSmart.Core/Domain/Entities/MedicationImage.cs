@@ -11,5 +11,7 @@ public class MedicationImage
     [Url(ErrorMessage = "Invalid URL format.")]
     public string? ImageUrl { get; set; }
 
+
+    public string PublicId { get; set; }
     public Medication Medication { get; set; }
 }

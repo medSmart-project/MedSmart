@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MedSmart.Presentation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0c6bc45af202d2722d756967a1e113268bc0cc3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3936b829940be6068e313e9a17c7704e35091e96")]
 [assembly: System.Reflection.AssemblyProductAttribute("MedSmart.Presentation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MedSmart.Presentation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
