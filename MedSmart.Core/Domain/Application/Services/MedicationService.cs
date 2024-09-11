@@ -2,10 +2,11 @@
 using MedSmart.Core.Domain.Application.DTOs;
 using MedSmart.Core.Domain.Entities;
 using MedSmart.Core.Domain.IRepositoryContracts;
+using MedSmart.Core.
 
 namespace MedSmart.Core.Domain.Application.Services;
 
-public class MedicationService
+public class c
 {
     private readonly IGenericRepository<Medication> _medicationRepository;
     private readonly IGenericRepository<MedicationImage> _medicationImageRepository;
@@ -22,6 +23,7 @@ public class MedicationService
         _medicationImageRepository = repositoryFactory.CreateRepository<MedicationImage>();
         _medicationTagRepository = repositoryFactory.CreateRepository<MedicationTag>();
         _discountRepository = repositoryFactory.CreateRepository<MedicationsDiscount>();
+        _context = repositoryFactory.CreateRepository<applicationdbcontext>();
         _unitOfWork = unitOfWork;
         _mapper = mapper;
         _imageService = imageService;
@@ -99,7 +101,8 @@ public class MedicationService
             }
         }
     }
-
+   
+   
     private void ValidateDiscount(AddMedicationDto medicationDto)
     {
         if (medicationDto.Discount <= 0)

@@ -192,7 +192,7 @@ public class MedicationRepository : IMedicationRepository
         return await _context.Medications
             .Include(m => m.Brand)
             .Include(m => m.Category)
-            .Include(m => m.MedicationImages)
+            .Include(m => m.Images)
             .Select(m => new MedicationCardDto
             {
                 Id = m.Id,
