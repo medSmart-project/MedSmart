@@ -16,3 +16,4 @@ public class MedicationCategory
     public ICollection<MedicationSubCategory> SubCategories { get; set; } = new List<MedicationSubCategory>();
     public ICollection<Medication> Medications { get; set; } = new List<Medication>();
 }
+
