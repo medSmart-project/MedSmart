@@ -242,7 +242,7 @@ namespace MedSmart.Core.Domain.Application.Services
                 {
                     // Map AddMedicationDto to Medication entity
                     var newMedication = _mapper.Map<Medication>(medicationDto);
-                  //  newMedication = DateTime.Now;
+                    //  newMedication = DateTime.Now;
 
                     // Add the medication to the repository
                     await _medicationRepository.AddAsync(newMedication);

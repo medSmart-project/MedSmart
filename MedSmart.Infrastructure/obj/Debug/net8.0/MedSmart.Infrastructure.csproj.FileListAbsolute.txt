@@ -16,3 +16,12 @@ C:\Users\ASUS\source\repos\MedSmart\MedSmart.Infrastructure\obj\Debug\net8.0\ref
 C:\Users\ASUS\source\repos\MedSmart\MedSmart.Infrastructure\obj\Debug\net8.0\MedSmart.Infrastructure.pdb
 C:\Users\ASUS\source\repos\MedSmart\MedSmart.Infrastructure\obj\Debug\net8.0\MedSmart.Infrastructure.genruntimeconfig.cache
 C:\Users\ASUS\source\repos\MedSmart\MedSmart.Infrastructure\obj\Debug\net8.0\ref\MedSmart.Infrastructure.dll
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Infrastructure\obj\Debug\net8.0\MedSmart.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Infrastructure\obj\Debug\net8.0\MedSmart.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Infrastructure\obj\Debug\net8.0\MedSmart.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Infrastructure\obj\Debug\net8.0\MedSmart.Infrastructure.AssemblyInfo.cs
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Infrastructure\obj\Debug\net8.0\MedSmart.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Infrastructure\obj\Debug\net8.0\MedSmart.Infrastructure.sourcelink.json
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Infrastructure\obj\Debug\net8.0\MedSmart.Infrastructure.dll
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Infrastructure\obj\Debug\net8.0\refint\MedSmart.Infrastructure.dll
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Infrastructure\obj\Debug\net8.0\MedSmart.Infrastructure.pdb

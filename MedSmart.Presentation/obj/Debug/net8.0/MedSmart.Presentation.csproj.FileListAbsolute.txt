@@ -144,3 +144,15 @@ C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\Micro
 C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\Documentation.xml
 C:\Users\ASUS\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\appsettings.json
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Presentation\bin\Debug\net8.0\Documentation.xml
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Presentation\obj\Debug\net8.0\MedSmart.Presentation.csproj.AssemblyReference.cache
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Presentation\obj\Debug\net8.0\MedSmart.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Presentation\obj\Debug\net8.0\MedSmart.Presentation.AssemblyInfoInputs.cache
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Presentation\obj\Debug\net8.0\MedSmart.Presentation.AssemblyInfo.cs
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Presentation\obj\Debug\net8.0\MedSmart.Presentation.csproj.CoreCompileInputs.cache
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Presentation\obj\Debug\net8.0\MedSmart.Presentation.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Presentation\obj\Debug\net8.0\MedSmart.Presentation.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Presentation\obj\Debug\net8.0\MedSmart.Presentation.sourcelink.json
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Presentation\obj\Debug\net8.0\MedSmart.Presentation.dll
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Presentation\obj\Debug\net8.0\refint\MedSmart.Presentation.dll
+C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Presentation\obj\Debug\net8.0\MedSmart.Presentation.pdb
