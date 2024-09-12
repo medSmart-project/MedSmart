@@ -19,3 +19,4 @@ C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Core\obj\Debug\net8.0\MedSmart.Cor
 C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Core\obj\Debug\net8.0\MedSmart.Core.dll
 C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Core\obj\Debug\net8.0\refint\MedSmart.Core.dll
 C:\Users\Hanaa\source\repos\MedSmart\MedSmart.Core\obj\Debug\net8.0\MedSmart.Core.pdb
+C:\Users\ASUS\source\repos\MedSmart\MedSmart.Core\obj\Debug\net8.0\MedSmart.Core.csproj.AssemblyReference.cache

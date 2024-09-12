@@ -1,23 +1,30 @@
-﻿using MedSmart.Core.Domain.IRepositoryContracts;
+﻿using System.Net.Mime;
+using MedSmart.Core.Domain.Entities;
+using MedSmart.Core.Domain.IRepositoryContracts;
 using MedSmart.Infrastructure.Persistence.Data;
+using MedSmart.Infrastructure.Persistence.RepositoryContracts;
 
-namespace MedSmart.Infrastructure.Persistence.RepositoryContracts
+public class RepositoryFactory : IRepositoryFactory
 {
-    /// <include file='Documentation.xml' path='doc/members/member[@name="T:MedSmart.Infrastructure.Persistence.RepositoryContracts.RepositoryFactory"]/*'/>
-    public class RepositoryFactory : IRepositoryFactory
+    private readonly ApplicationDbContext _context;
+
+    public RepositoryFactory(ApplicationDbContext context)
     {
-        private readonly ApplicationDbContext _context;
+        _context = context;
+    }
 
-        /// <include file='Documentation.xml' path='doc/members/member[@name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.RepositoryFactory.#ctor(MedSmart.Infrastructure.Persistence.Data.ApplicationDbContext)"]/*'/>
-        public RepositoryFactory(ApplicationDbContext context)
-        {
-            _context = context;
-        }
+    public IGenericRepository<T> CreateRepository<T>() where T : class
+    {
+        return new GenericRepository<T>(_context);
+    }
 
-        /// <include file='Documentation.xml' path='doc/members/member[@name="M:MedSmart.Infrastructure.Persistence.RepositoryContracts.RepositoryFactory.CreateRepository``1"]/*'/>
-        public IGenericRepository<T> CreateRepository<T>() where T : class
-        {
-            return new GenericRepository<T>(_context);
-        }
+    public IMedicationRepository CreateMedicationRepository()
+    {
+        return new MedicationRepository(_context, new GenericRepository<Medication>(_context));
+    }
+
+    public IImageRepository CreateImageRepository()
+    {
+        return new ImageRepository(_context, new CloudinaryDotNet.Cloudinary());
     }
 }

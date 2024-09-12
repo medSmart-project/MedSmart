@@ -1,5 +1,7 @@
 ﻿using System.Linq.Expressions;
 using AutoMapper;
+using MedSmart.Core.Domain.Application.DTOs;
+using MedSmart.Core.Domain.Application.IService;
 using MedSmart.Core.Domain.Entities;
 using MedSmart.Core.Domain.IRepositoryContracts;
 

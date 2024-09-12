@@ -18,6 +18,7 @@ public class MedicationRepository : IMedicationRepository
 
     public async Task<IEnumerable<Medication>> GetMedicationsByFilterAsync(MedicationFilter filter)
     {
+
         var query = _context.Medications.Include(m => m.Images).AsQueryable();
 
         if (!string.IsNullOrEmpty(filter.Name))
@@ -47,12 +48,12 @@ public class MedicationRepository : IMedicationRepository
 
         if (filter.MinDiscount.HasValue)
         {
-            query = query.Where(m => m.MedicationsDiscounts.Any(d => d.Discount >= filter.MinDiscount.Value));
+            query = query.Where(m => m.MedicationsDiscounts.Discount >= filter.MinDiscount.Value);
         }
 
         if (filter.MaxDiscount.HasValue)
         {
-            query = query.Where(m => m.MedicationsDiscounts.Any(d => d.Discount <= filter.MaxDiscount.Value));
+            query = query.Where(m => m.MedicationsDiscounts.Discount <= filter.MaxDiscount.Value);
         }
 
         if (filter.MinRating.HasValue)
@@ -101,7 +102,7 @@ public class MedicationRepository : IMedicationRepository
             .Include(m => m.Brand)
             .Include(m => m.Category)
             .Include(m => m.Images)
-            .OrderByDescending(m => m.CreatedDate)
+            .OrderByDescending(m => m.CreatedAt)
             .Take(10)
             .AsNoTracking()
             .ToListAsync();
@@ -109,15 +110,20 @@ public class MedicationRepository : IMedicationRepository
 
     public async Task<IEnumerable<Medication>> GetFeaturedMedicationsAsync()
     {
-        return await _context.Medications
-            .Include(m => m.Brand)
-            .Include(m => m.Category)
-            .Include(m => m.Images)
-            .Where(m => m.IsFeatured)
-            .Take(10)
-            .AsNoTracking()
-            .ToListAsync();
+        throw new NotImplementedException();
     }
+
+    //public async Task<IEnumerable<Medication>> GetFeaturedMedicationsAsync()
+    //{
+    //    return await _context.Medications
+    //        .Include(m => m.Brand)
+    //        .Include(m => m.Category)
+    //        .Include(m => m.Images)
+    //        .Where(m => m.IsFeatured)
+    //        .Take(10)
+    //        .AsNoTracking()
+    //        .ToListAsync();
+    //}
 
     public async Task<IEnumerable<Medication>> GetMedicationsOnSaleAsync()
     {
@@ -126,8 +132,10 @@ public class MedicationRepository : IMedicationRepository
             .Include(m => m.Images)
             .Include(m => m.Category)
             .Include(m => m.MedicationsDiscounts)
-            .Where(m => m.MedicationsDiscounts.(d => d.Discount > 0))
+            .Where(m => m.MedicationsDiscounts.Discount > 0)
             .AsNoTracking()
+
+
             .ToListAsync();
     }
 
@@ -187,22 +195,22 @@ public class MedicationRepository : IMedicationRepository
             .ToListAsync();
     }
 
-    public async Task<IEnumerable<MedicationCardDto>> GetMedicationCards()
-    {
-        return await _context.Medications
-            .Include(m => m.Brand)
-            .Include(m => m.Category)
-            .Include(m => m.Images)
-            .Select(m => new MedicationCardDto
-            {
-                Id = m.Id,
-                Name = m.Name,
-                Price = m.Price,
-                ImageUrl = m.MedicationImages.FirstOrDefault().ImageUrl
-            })
-            .AsNoTracking()
-            .ToListAsync();
-    }
+    //public async Task<IEnumerable<MedicationCardDto>> GetMedicationCards()
+    //{
+    //    return await _context.Medications
+    //        .Include(m => m.Brand)
+    //        .Include(m => m.Category)
+    //        .Include(m => m.Images)
+    //        .Select(m => new MedicationCardDto
+    //        {
+    //            Id = m.Id,
+    //            Name = m.Name,
+    //            Price = m.Price,
+    //            ImageUrl = m.MedicationImages.FirstOrDefault().ImageUrl
+    //        })
+    //        .AsNoTracking()
+    //        .ToListAsync();
+    //}
 
     //public async Task<IEnumerable<MedicationDetailDto>> GetMedications()
     //{

@@ -2,6 +2,7 @@
 using CloudinaryDotNet.Actions;
 using MedSmart.Core.Domain.Application.DTOs;
 using MedSmart.Core.Domain.Entities;
+using MedSmart.Core.Domain.IRepositoryContracts;
 using MedSmart.Infrastructure.Persistence.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;

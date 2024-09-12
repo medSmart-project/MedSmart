@@ -2,7 +2,9 @@
 
 public interface IRepositoryFactory
 {
+
     IGenericRepository<T> CreateRepository<T>() where T : class;
     IMedicationRepository CreateMedicationRepository();
+    IImageRepository CreateImageRepository();
 
 }
