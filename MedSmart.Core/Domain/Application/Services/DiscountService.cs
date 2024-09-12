@@ -10,14 +10,14 @@ namespace MedSmart.Core.Domain.Application.Services;
 public class DiscountService : IMedicationsDiscountService
 {
     private readonly IGenericRepository<MedicationsDiscount> _discountRepository;
-    private readonly IGenericRepository<Product> _productRepository;
+    private readonly IGenericRepository<Medication> _productRepository;
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
 
     public DiscountService(IRepositoryFactory repositoryFactory, IUnitOfWork unitOfWork, IMapper mapper)
     {
-        _discountRepository = repositoryFactory.CreateRepository<Discount>();
-        _productRepository = repositoryFactory.CreateRepository<Product>();
+        _discountRepository = repositoryFactory.CreateRepository<MedicationsDiscount>();
+        _productRepository = repositoryFactory.CreateRepository<Medication>();
         _unitOfWork = unitOfWork;
         _mapper = mapper;
     }
@@ -43,13 +43,13 @@ public class DiscountService : IMedicationsDiscountService
     {
         ValidateDiscount(discountDto);
 
-        var product = await _productRepository.GetByIdAsync(discountDto.ProductId);
+        var product = await _productRepository.GetByIdAsync(discountDto.MedicationId);
         if (product == null)
         {
             throw new InvalidOperationException("Product does not exist.");
         }
 
-        var existingDiscounts = await _discountRepository.FindAsync(d => d.ProductId == discountDto.ProductId);
+        var existingDiscounts = await _discountRepository.FindAsync(d => d.MedicationId == discountDto.MedicationId);
         if (existingDiscounts.Any())
         {
             throw new InvalidOperationException("A discount already exists for this product.");
@@ -92,9 +92,11 @@ public class DiscountService : IMedicationsDiscountService
         throw new NotImplementedException();
     }
 
-    public async Task<IEnumerable<MedicationsDiscountDto>> FindAsync(Expression<Func<Discount, bool>> predicate)
+
+    public async Task<IEnumerable<MedicationsDiscountDto>> FindAsync(Expression<Func<MedicationsDiscountDto, bool>> predicate)
     {
-        var discounts = await _discountRepository.FindAsync(predicate);
+        var mappedPredicate = _mapper.Map<Expression<Func<MedicationsDiscount, bool>>>(predicate);
+        var discounts = await _discountRepository.FindAsync(mappedPredicate);
         return _mapper.Map<IEnumerable<MedicationsDiscountDto>>(discounts);
     }
 
@@ -110,7 +112,7 @@ public class DiscountService : IMedicationsDiscountService
             throw new ArgumentException("Start date must be earlier than end date.");
         }
 
-        if (discountDto.ProductId <= 0)
+        if (discountDto.MedicationId <= 0)
         {
             throw new ArgumentException("Invalid product ID.");
         }
@@ -125,9 +127,9 @@ public class DiscountService : IMedicationsDiscountService
             throw new ArgumentException("End date cannot be in the past.");
         }
     }
-
-    public async Task DeleteExpiredDiscountsAsync()
-    {
-        await _unitOfWork.DeleteExpiredDiscountsAsync();
-    }
+       
+    //public async Task DeleteExpiredDiscountsAsync()
+    //{
+    //    await _unitOfWork.DeleteExpiredDiscountsAsync();
+    //}
 }

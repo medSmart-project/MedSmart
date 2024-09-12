@@ -4,17 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MedSmart.Presentation.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class UserController : ControllerBase
-    {
-        using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-using YourNamespace.Services;  // Add your service namespace
-using YourNamespace.Models;   // Add your models namespace
-
-namespace YourNamespace.Controllers
-    {
+   
         [ApiController]
         [Route("api/[controller]")]
         public class PatientController : ControllerBase
@@ -91,5 +81,5 @@ namespace YourNamespace.Controllers
                 return Ok(similarOrRelatedMedications);
             }
         }
-    }
 }
+

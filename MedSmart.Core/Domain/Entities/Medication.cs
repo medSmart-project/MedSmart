@@ -46,6 +46,10 @@ namespace MedSmart.Core.Domain.Entities
 
         [DataType(DataType.Date, ErrorMessage = "Invalid date format.")]
         public DateTime ExpiryDate { get; set; }
+        [DataType(DataType.Date ,ErrorMessage = "Invalid date format")]
+
+
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         [Range(0.01, 1000, ErrorMessage = "Weight must be between 0.01 and 1000.")]
         public decimal Weight { get; set; }

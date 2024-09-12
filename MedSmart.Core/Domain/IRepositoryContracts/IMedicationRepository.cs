@@ -16,7 +16,7 @@ public interface IMedicationRepository
     Task<IEnumerable<Medication>> GetOutOfStockMedicationsAsync();
     Task<IEnumerable<Medication>> GetRecommendedMedicationsAsync();
     Task<IEnumerable<Medication>> GetSimilarOrRelatedMedicationsAsync(int medicationId, bool related = false);
-    Task<IEnumerable<MedicationCardDto>> GetMedicationCards();
+   // Task<IEnumerable<MedicationCardDto>> GetMedicationCards();
     Task<Medication> GetByIdAsync(int id);
     Task<IDbContextTransaction> BeginTransactionAsync();
     Task CommitTransactionAsync();

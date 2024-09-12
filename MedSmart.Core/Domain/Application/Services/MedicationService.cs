@@ -1,12 +1,15 @@
-﻿using AutoMapper;
+﻿
+using AutoMapper;
 using MedSmart.Core.Domain.Application.DTOs;
+using MedSmart.Core.Domain.Application.IService;
 using MedSmart.Core.Domain.Entities;
 using MedSmart.Core.Domain.IRepositoryContracts;
+<<<<<<< HEAD
+=======
 
+>>>>>>> master
 
-namespace MedSmart.Core.Domain.Application.Services;
-
-public class c
+public class MedicationService : IMedicationService
 {
     private readonly IGenericRepository<Medication> _medicationRepository;
     private readonly IGenericRepository<MedicationImage> _medicationImageRepository;
@@ -15,15 +18,14 @@ public class c
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
     private readonly IImageService _imageService;
-    private readonly ITagService _tagService;
+    private readonly IMedicationTagServices _tagService;
 
-    public MedicationService(IRepositoryFactory repositoryFactory, IUnitOfWork unitOfWork, IMapper mapper, IImageService imageService, ITagService tagService)
+    public MedicationService(IRepositoryFactory repositoryFactory, IUnitOfWork unitOfWork, IMapper mapper, IImageService imageService, IMedicationTagServices tagService)
     {
         _medicationRepository = repositoryFactory.CreateRepository<Medication>();
         _medicationImageRepository = repositoryFactory.CreateRepository<MedicationImage>();
         _medicationTagRepository = repositoryFactory.CreateRepository<MedicationTag>();
         _discountRepository = repositoryFactory.CreateRepository<MedicationsDiscount>();
-        _context = repositoryFactory.CreateRepository<applicationdbcontext>();
         _unitOfWork = unitOfWork;
         _mapper = mapper;
         _imageService = imageService;
@@ -38,7 +40,6 @@ public class c
             {
                 // Map AddMedicationDto to Medication entity
                 var newMedication = _mapper.Map<Medication>(medicationDto);
-                //  newMedication = DateTime.Now;
 
                 // Add the medication to the repository
                 await _medicationRepository.AddAsync(newMedication);
@@ -65,12 +66,9 @@ public class c
                 {
                     foreach (var tag in medicationDto.Tags)
                     {
-                        var tagEntity = await _tagService.DetermineTagAsync(tag);
-
                         var medicationTag = new MedicationTag
                         {
                             MedicationId = newMedication.Id,
-                            TagId = tagEntity.Id
                         };
                         await _medicationTagRepository.AddAsync(medicationTag);
                     }
@@ -101,8 +99,27 @@ public class c
             }
         }
     }
-   
-   
+
+    public async Task UpdateAsync(UpdateMedicationDto medicationDto)
+    {
+        throw new NotImplementedException();
+    }
+
+    public async Task DeleteAsync(int medicationId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public async Task<MedicationDto> GetByIdAsync(int medicationId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public async Task<IEnumerable<MedicationDto>> GetAllAsync()
+    {
+        throw new NotImplementedException();
+    }
+
     private void ValidateDiscount(AddMedicationDto medicationDto)
     {
         if (medicationDto.Discount <= 0)
