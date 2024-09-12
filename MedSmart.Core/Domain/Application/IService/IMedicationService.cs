@@ -10,3 +10,11 @@ public interface IMedicationService
     Task<MedicationDto> GetByIdAsync(int medicationId);
     Task<IEnumerable<MedicationDto>> GetAllAsync();
 }
+
+public class MedicationDto
+{
+}
+
+public class UpdateMedicationDto
+{
+}
