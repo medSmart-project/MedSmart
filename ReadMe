@@ -18,17 +18,19 @@
 
 ## API Endpoints
 
-| Resource        | Method | Endpoint                   | Description                                    |
-|-----------------|--------|----------------------------|------------------------------------------------|
-| **Patients**    | GET    | `/api/patients`            | Get a list of all patients                    |
-|                 | POST   | `/api/patients`            | Add a new patient                             |
+| Resource        | Method | Endpoint                   | Description                                   |
+|-----------------|--------|----------------------------|-----------------------------------------------|
+| **Patients**    | POST   | `/api/patients`            | Add a new patient                             |
 |                 | PUT    | `/api/patients/{id}`       | Update a patient's details                    |
 |                 | DELETE | `/api/patients/{id}`       | Delete a patient                              |
+| **Pharmacist**  | POST   | `/api/pharmacist`          | Add a new Pharmacist                          |
+|                 | PUT    | `/api/Pharmacist/{id}`     | Update a Pharmacist's details                 |
+|                 | DELETE | `/api/Pharmacist/{id}`     | Delete a Pharmacist                           |
 | **Medications** | GET    | `/api/medications`         | Get a list of all medications                 |
 |                 | POST   | `/api/medications`         | Add a new medication                          |
 |                 | PUT    | `/api/medications/{id}`    | Update a medication                           |
 |                 | DELETE | `/api/medications/{id}`    | Delete a medication                           |
-| **Predictions** | POST   | `/api/Medpredictions`         | Send patient data and receive predictions from the ML model |
+| **Predictions** | POST   | `/api/Medpredictions`      | Send patient data and receive predictions from the ML model |
 
 
 ## Project Overview
