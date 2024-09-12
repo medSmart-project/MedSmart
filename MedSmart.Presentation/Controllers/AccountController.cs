@@ -13,7 +13,7 @@ namespace MedSmart.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class HomeController : ControllerBase
+    public class AccountController : ControllerBase
     {
         private readonly UserManager<AppUser> userManager;
 
