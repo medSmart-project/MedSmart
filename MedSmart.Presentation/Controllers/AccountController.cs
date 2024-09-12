@@ -5,11 +5,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MedSmart.Presentation.Controllers
 {
+<<<<<<< HEAD:MedSmart.Presentation/Controllers/HomeController.cs
 //    [Route("api/[controller]")]
 //    [ApiController]
 //    public class HomeController : ControllerBase
 //    {
 //        private readonly UserManager<AppUser> userManager;
+=======
+    [Route("api/[controller]")]
+    [ApiController]
+    public class AccountController : ControllerBase
+    {
+        private readonly UserManager<AppUser> userManager;
+>>>>>>> master:MedSmart.Presentation/Controllers/AccountController.cs
 
 //        public AccountController(UserManager<AppUser> userManager)
 //        {
