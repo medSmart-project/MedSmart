@@ -1,0 +1,71 @@
+# MedSmart
+
+**MedSmart** is a healthcare management system for managing patient records, tracking medications, and leveraging AI for predictions. It uses ASP.NET Core for the backend and integrates with machine learning models.
+
+## Table of Contents
+
+| Section            | Details                                                       |
+|--------------------|---------------------------------------------------------------|
+| [Project Overview](#project-overview) | Overview and key features |
+| [Installation](#installation)         | Setup instructions        |
+| [Configuration](#configuration)       | Configuration details      |
+| [Machine Learning Integration](#machine-learning-integration) | Integration with ML models |
+| [Testing](#testing)                   | How to run tests           |
+| [Deployment](#deployment)             | Deployment instructions    |
+| [Contributing](#contributing)         | How to contribute          |
+| [License](#license)                   | License information        |
+| [Contact](#contact)                   | Contact details            |
+
+## API Endpoints
+
+| Resource        | Method | Endpoint                   | Description                                    |
+|-----------------|--------|----------------------------|------------------------------------------------|
+| **Patients**    | GET    | `/api/patients`            | Get a list of all patients                    |
+|                 | POST   | `/api/patients`            | Add a new patient                             |
+|                 | PUT    | `/api/patients/{id}`       | Update a patient's details                    |
+|                 | DELETE | `/api/patients/{id}`       | Delete a patient                              |
+| **Medications** | GET    | `/api/medications`         | Get a list of all medications                 |
+|                 | POST   | `/api/medications`         | Add a new medication                          |
+|                 | PUT    | `/api/medications/{id}`    | Update a medication                           |
+|                 | DELETE | `/api/medications/{id}`    | Delete a medication                           |
+| **Predictions** | POST   | `/api/Medpredictions`         | Send patient data and receive predictions from the ML model |
+
+
+## Project Overview
+
+| Aspect              | Details                                                       |
+|---------------------|---------------------------------------------------------------|
+| **Description**     | Healthcare management system for patient and medication management with AI predictions. |
+| **Technology Stack**| ASP.NET Core, SQL Server, Python (Flask/FastAPI)             |
+| **Features**        | - Manage patient records <br> - Track medications <br> - AI predictions for health management |
+
+## Installation
+
+| Step                | Command/Details                                            |
+|---------------------|------------------------------------------------------------|
+| **Clone Repository**| `git clone https://github.com/medSmart-project/MedSmart.git` |
+| **Navigate to Project** | `cd MedSmart`                                             |
+| **Restore Packages**| `dotnet restore`                                          |
+| **Database Setup**  | Configure `appsettings.json`, then run migrations: `dotnet ef database update` |
+| **Run Application** | `dotnet run`                                              |
+
+## Configuration
+
+| File                | Purpose                                                    |
+|---------------------|------------------------------------------------------------|
+| **appsettings.json**| Configure database connection strings and other settings. |
+
+**Example `appsettings.json` Configuration:**
+
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=.;Database=MedSmart; Integrated Security=True; Trust Server Certificate= true"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning"
+    }
+  }
+}
